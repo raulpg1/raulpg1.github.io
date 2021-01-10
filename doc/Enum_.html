@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="project v0.1.0">
+
+    <title>Enum_ — project v0.1.0</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+
+    <script src="dist/sidebar_items-b81ded94fe.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
+
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectDetails">
+      <a href="api-reference.html" class="sidebar-projectName">
+project
+      </a>
+      <strong class="sidebar-projectVersion">
+        v0.1.0
+      </strong>
+    </div>
+
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+      <h1>
+Enum_ <small class="app-vsn">(project v0.1.0)</small>
+
+      </h1>
+
+
+        <section id="moduledoc">
+<p>  EJEMPLOS</p><p>  Ejemplo 1: Enum.all</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(1)&gt; </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">all?</span><span class="p" data-group-id="3840403535-1">(</span><span class="p" data-group-id="3840403535-2">[</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="3840403535-2">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="3840403535-3">fn</span><span class="p" data-group-id="3840403535-4">(</span><span class="n">s</span><span class="p" data-group-id="3840403535-4">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="k" data-group-id="3840403535-3">end</span><span class="p" data-group-id="3840403535-1">)</span><span class="w">
+</span><span class="no">false</span><span class="w">
+</span><span class="gp unselectable">iex(2)&gt; </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">all?</span><span class="p" data-group-id="3840403535-5">(</span><span class="p" data-group-id="3840403535-6">[</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="no">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="o">==</span><span class="s">&quot;x&quot;</span><span class="p" data-group-id="3840403535-6">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="3840403535-7">fn</span><span class="p" data-group-id="3840403535-8">(</span><span class="n">s</span><span class="p" data-group-id="3840403535-8">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="k" data-group-id="3840403535-7">end</span><span class="p" data-group-id="3840403535-5">)</span><span class="w">
+</span><span class="no">true</span></code></pre><p>  Ejemplo 2: Enum.any</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(3)&gt; </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">any?</span><span class="p" data-group-id="1521892663-1">(</span><span class="p" data-group-id="1521892663-2">[</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="1521892663-2">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="1521892663-3">fn</span><span class="p" data-group-id="1521892663-4">(</span><span class="n">s</span><span class="p" data-group-id="1521892663-4">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="k" data-group-id="1521892663-3">end</span><span class="p" data-group-id="1521892663-1">)</span><span class="w">
+</span><span class="no">true</span><span class="w">
+</span><span class="gp unselectable">iex(4)&gt; </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">any?</span><span class="p" data-group-id="1521892663-5">(</span><span class="p" data-group-id="1521892663-6">[</span><span class="no">true</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="1521892663-6">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="1521892663-7">fn</span><span class="p" data-group-id="1521892663-8">(</span><span class="n">s</span><span class="p" data-group-id="1521892663-8">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="k" data-group-id="1521892663-7">end</span><span class="p" data-group-id="1521892663-5">)</span><span class="w">
+</span><span class="no">true</span></code></pre><p>  Ejemplo 3: Chunk_by</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(5)&gt; </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">chunk_by</span><span class="p" data-group-id="0061655163-1">(</span><span class="p" data-group-id="0061655163-2">[</span><span class="s">&quot;uno&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tres&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cuatro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cinco&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cien&quot;</span><span class="p" data-group-id="0061655163-2">]</span><span class="p">,</span><span class="k" data-group-id="0061655163-3">fn</span><span class="p" data-group-id="0061655163-4">(</span><span class="n">x</span><span class="p" data-group-id="0061655163-4">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">length</span><span class="p" data-group-id="0061655163-5">(</span><span class="n">x</span><span class="p" data-group-id="0061655163-5">)</span><span class="w"> </span><span class="k" data-group-id="0061655163-3">end</span><span class="p" data-group-id="0061655163-1">)</span><span class="w">
+</span><span class="p" data-group-id="0061655163-6">[</span><span class="p" data-group-id="0061655163-7">[</span><span class="s">&quot;uno&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;dos&quot;</span><span class="p" data-group-id="0061655163-7">]</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0061655163-8">[</span><span class="s">&quot;tres&quot;</span><span class="p" data-group-id="0061655163-8">]</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0061655163-9">[</span><span class="s">&quot;cuatro&quot;</span><span class="p" data-group-id="0061655163-9">]</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0061655163-10">[</span><span class="s">&quot;cinco&quot;</span><span class="p" data-group-id="0061655163-10">]</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0061655163-11">[</span><span class="s">&quot;cien&quot;</span><span class="p" data-group-id="0061655163-11">]</span><span class="p" data-group-id="0061655163-6">]</span></code></pre><p>  Ejemplo 4:  Map</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(6)&gt; </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="3395107026-1">(</span><span class="p" data-group-id="3395107026-2">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="3395107026-2">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="3395107026-3">fn</span><span class="p" data-group-id="3395107026-4">(</span><span class="n">x</span><span class="p" data-group-id="3395107026-4">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k" data-group-id="3395107026-3">end</span><span class="p" data-group-id="3395107026-1">)</span><span class="w">
+</span><span class="p" data-group-id="3395107026-5">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="3395107026-5">]</span></code></pre><p>  Ejemplo 5: Filter</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(7)&gt; </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">filter</span><span class="p" data-group-id="5374887872-1">(</span><span class="p" data-group-id="5374887872-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="5374887872-2">]</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="5374887872-3">fn</span><span class="p" data-group-id="5374887872-4">(</span><span class="n">x</span><span class="p" data-group-id="5374887872-4">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">rem</span><span class="p" data-group-id="5374887872-5">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="5374887872-5">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k" data-group-id="5374887872-3">end</span><span class="p" data-group-id="5374887872-1">)</span><span class="w">
+</span><span class="p" data-group-id="5374887872-6">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="5374887872-6">]</span></code></pre><p>  Ejemplo 6: Min</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(8)&gt; </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">min</span><span class="p" data-group-id="9792010596-1">(</span><span class="p" data-group-id="9792010596-2">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p" data-group-id="9792010596-2">]</span><span class="p" data-group-id="9792010596-1">)</span><span class="w">
+</span><span class="p" data-group-id="9792010596-3">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="ss">:atomo</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span><span class="p" data-group-id="9792010596-3">]</span></code></pre><p>  Ejemplo 7: Max</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(9)&gt; </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">max</span><span class="p" data-group-id="1695986192-1">(</span><span class="p" data-group-id="1695986192-2">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p" data-group-id="1695986192-2">]</span><span class="p" data-group-id="1695986192-1">)</span><span class="w">
+</span><span class="mi">9</span></code></pre><p>  Ejemplo 8: Reduce</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(10)&gt; </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">reduce</span><span class="p" data-group-id="0732988265-1">(</span><span class="p" data-group-id="0732988265-2">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p" data-group-id="0732988265-2">]</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="0732988265-3">fn</span><span class="p" data-group-id="0732988265-4">(</span><span class="n">numero</span><span class="p">,</span><span class="n">contador</span><span class="p" data-group-id="0732988265-4">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">numero</span><span class="o">*</span><span class="n">contador</span><span class="w"> </span><span class="k" data-group-id="0732988265-3">end</span><span class="p" data-group-id="0732988265-1">)</span><span class="w">
+</span><span class="o">-</span><span class="mi">105</span></code></pre><p>  Ejemplo 9: Sort</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(11)&gt; </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">sort</span><span class="p" data-group-id="7327678889-1">(</span><span class="p" data-group-id="7327678889-2">[</span><span class="ss">:ok</span><span class="p">,</span><span class="ss">:okkkkkk</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p" data-group-id="7327678889-2">]</span><span class="p" data-group-id="7327678889-1">)</span><span class="w">
+</span><span class="p" data-group-id="7327678889-3">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="ss">:okkkkkk</span><span class="p" data-group-id="7327678889-3">]</span></code></pre>
+        </section>
+
+
+
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
+          </span>
+          <span class="line">
+            Designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+        </p>
+        <p>
+
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
+          </button>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+  </body>
+</html>

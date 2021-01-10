@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.23.0">
+    <meta name="project" content="project v0.1.0">
+
+    <title>Estructuras_control — project v0.1.0</title>
+    <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
+
+    <script src="dist/sidebar_items-b81ded94fe.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-60a0c9f10e9e52eae31f.js"></script>
+
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode') === 'true') document.body.className += ' night-mode'; } catch (e) { }</script>
+
+<div class="main">
+
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <span class="icon-search" aria-hidden="true" title="Submit search"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <span class="icon-cross" aria-hidden="true" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectDetails">
+      <a href="api-reference.html" class="sidebar-projectName">
+project
+      </a>
+      <strong class="sidebar-projectVersion">
+        v0.1.0
+      </strong>
+    </div>
+
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+      <h1>
+Estructuras_control <small class="app-vsn">(project v0.1.0)</small>
+
+      </h1>
+
+
+        <section id="moduledoc">
+<p>  EJEMPLOS</p><p>  Ejemplo 1: If else</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="k">if</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="k" data-group-id="1285147163-1">do</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="s">&quot;Nunca se ejecutará este sentencia&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="k" data-group-id="1285147163-1">else</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="s">&quot;Acierto&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="k" data-group-id="1285147163-1">end</span></code></pre><p>  Ejemplo 2: Unless</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="k">unless</span><span class="w"> </span><span class="no">true</span><span class="w"> </span><span class="k" data-group-id="0211983069-1">do</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="s">&quot;Nunca se ejecutará esta sentencia&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="k" data-group-id="0211983069-1">end</span></code></pre><p>  Ejemplo 3: Case statement</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">testvalue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="k">case</span><span class="w"> </span><span class="n">testvalue</span><span class="w"> </span><span class="k" data-group-id="0024870501-1">do</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="mi">200</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">true</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="mi">404</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">true</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">false</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="k" data-group-id="0024870501-1">end</span><span class="w">
+</span><span class="no">false</span></code></pre><p>  Ejemplo 4: Case con guardias</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="k">case</span><span class="w"> </span><span class="p" data-group-id="6966487882-1">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="6966487882-1">}</span><span class="w"> </span><span class="k" data-group-id="6966487882-2">do</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="p" data-group-id="6966487882-3">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="6966487882-3">}</span><span class="w"> </span><span class="ow">when</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">    </span><span class="s">&quot;Correcto&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">    </span><span class="s">&quot;Falso&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="k" data-group-id="6966487882-2">end</span><span class="w">
+</span><span class="s">&quot;Correcto&quot;</span></code></pre><p>  Ejemplo 5: Cond</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="k">cond</span><span class="w"> </span><span class="k" data-group-id="9068318960-1">do</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Esto es falso&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="nc">String</span><span class="o">.</span><span class="n">lenght</span><span class="p" data-group-id="9068318960-2">(</span><span class="s">&quot;hola&quot;</span><span class="p" data-group-id="9068318960-2">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Esto también&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="no">true</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Ninguna condición es cierta&quot;</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="k" data-group-id="9068318960-1">end</span><span class="w">
+</span><span class="s">&quot;Ninguna condición es cierta&quot;</span></code></pre><p>  Ejemplo 6: With</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="k">with</span><span class="w"> </span><span class="p" data-group-id="9190512847-1">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p" data-group-id="9190512847-1">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">Map</span><span class="o">.</span><span class="n">fetch</span><span class="p" data-group-id="9190512847-2">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="ss">:nombre</span><span class="p" data-group-id="9190512847-2">)</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="w">     </span><span class="p" data-group-id="9190512847-3">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">apellido</span><span class="p" data-group-id="9190512847-3">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">Map</span><span class="o">.</span><span class="n">fetch</span><span class="p" data-group-id="9190512847-4">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="ss">:apellido</span><span class="p" data-group-id="9190512847-4">)</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="w">     </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="n">apellido</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">nombre</span></code></pre>
+        </section>
+
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mostrar_usuario/1">mostrar_usuario(user)</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Función mostrar nombre con with</p></div>
+
+</div>
+
+  </div>
+
+        </section>
+
+
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+Functions
+          </h1>
+          <div class="functions-list">
+<section class="detail" id="mostrar_usuario/1">
+
+  <div class="detail-header">
+    <a href="#mostrar_usuario/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature">mostrar_usuario(user)</h1>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Función mostrar nombre con with</p><h2 id="mostrar_usuario/1-parámetros" class="section-heading">
+  <a href="#mostrar_usuario/1-parámetros" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Parámetros
+</h2>
+<ul><li>user: Mapa que contiene nombre y apellido</li></ul><h2 id="mostrar_usuario/1-examples" class="section-heading">
+  <a href="#mostrar_usuario/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex(1)&gt; </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="1417695795-1">%{</span><span class="ss">nombre</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Ignacio&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">apellido</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Pascual&quot;</span><span class="p" data-group-id="1417695795-1">}</span><span class="w">
+</span><span class="p" data-group-id="1417695795-2">%{</span><span class="ss">nombre</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Ignacio&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">apellido</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Pascual&quot;</span><span class="p" data-group-id="1417695795-2">}</span><span class="w">
+</span><span class="gp unselectable">iex(2)&gt; </span><span class="nc">Estrucutras_control</span><span class="o">.</span><span class="n">mostrar_usuario</span><span class="p" data-group-id="1417695795-3">(</span><span class="n">user</span><span class="p" data-group-id="1417695795-3">)</span><span class="w">
+</span><span class="s">&quot;Pascual, Ignacio&quot;</span></code></pre>
+  </section>
+</section>
+
+          </div>
+        </section>
+
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.23.0) for the
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank">Elixir programming language</a>.
+          </span>
+          <span class="line">
+            Designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+        </p>
+        <p>
+
+            <a href="api-reference.html" title="API reference" class="line footer-button">API Reference</a>
+
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-quick-switch">
+            Go to a HexDocs package
+          </button>
+          <button class="line footer-button tooltips-toggle">
+            <span class="tooltips-option-disable">Disable tooltips</span>
+            <span class="tooltips-option-enable">Enable tooltips</span>
+          </button>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+  </body>
+</html>
