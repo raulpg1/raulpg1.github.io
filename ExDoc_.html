@@ -83,23 +83,25 @@ ExDoc_ <small class="app-vsn">(project v0.1.0)</small>
   @moduledoc &quot;&quot;&quot; para que detecte donde comienza nuestro texto.
   Además de esto con la anotacion @spec podemos definir los tipos de entrada
   y salida y añadirlo a la página. Podemos añadir los parámetros de la función
-  y por ultimo añadir ejemplos del código.</p><pre><code class="nohighlight makeup elixir"><span class="na">@moduledoc</span><span class="w"> </span><span class="s">&quot;&quot;&quot;
+  y por ultimo añadir ejemplos del código.</p><pre><code class="nohighlight makeup elixir"><span class="c1">#Este sería el codigo para generar esta página</span><span class="w">
+</span><span class="na">@moduledoc</span><span class="w"> </span><span class="s">&quot;&quot;&quot;
 
   Aqui podemos añadir el texto que queramos.
 
   ## Parámetros
 
-    - Variable x e y tienen que ser enteros.
+    - Las variables x e y tienen que ser enteros.
 
-    ## Examples
-    iex&gt; ExDoc.suma(2,3)
-    5
+  ## Examples
+
+      iex&gt; ExDoc.suma(2,3)
+      5
 
 &quot;&quot;&quot;</span><span class="w">
-</span><span class="na">@spec</span><span class="w"> </span><span class="n">suma</span><span class="p" data-group-id="3430941956-1">(</span><span class="nc">Integer</span><span class="p">,</span><span class="nc">Integer</span><span class="p" data-group-id="3430941956-1">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nc">Integer</span><span class="w">
-</span><span class="kd">def</span><span class="w"> </span><span class="nf">suma</span><span class="p" data-group-id="3430941956-2">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p" data-group-id="3430941956-2">)</span><span class="w"> </span><span class="k" data-group-id="3430941956-3">do</span><span class="w">
-  </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="3430941956-4">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p" data-group-id="3430941956-4">)</span><span class="w">
-</span><span class="k" data-group-id="3430941956-3">end</span></code></pre><h2 id="module-parámetros" class="section-heading">
+</span><span class="na">@spec</span><span class="w"> </span><span class="n">suma</span><span class="p" data-group-id="4426392980-1">(</span><span class="nc">Integer</span><span class="p">,</span><span class="nc">Integer</span><span class="p" data-group-id="4426392980-1">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nc">Integer</span><span class="w">
+</span><span class="kd">def</span><span class="w"> </span><span class="nf">suma</span><span class="p" data-group-id="4426392980-2">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p" data-group-id="4426392980-2">)</span><span class="w"> </span><span class="k" data-group-id="4426392980-3">do</span><span class="w">
+  </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="4426392980-4">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p" data-group-id="4426392980-4">)</span><span class="w">
+</span><span class="k" data-group-id="4426392980-3">end</span></code></pre><h2 id="module-parámetros" class="section-heading">
   <a href="#module-parámetros" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Parámetros
 </h2>
@@ -107,7 +109,7 @@ ExDoc_ <small class="app-vsn">(project v0.1.0)</small>
   <a href="#module-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">ExDoc</span><span class="o">.</span><span class="n">suma</span><span class="p" data-group-id="4566267079-1">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="4566267079-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">ExDoc</span><span class="o">.</span><span class="n">suma</span><span class="p" data-group-id="5328372836-1">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="5328372836-1">)</span><span class="w">
 </span><span class="mi">5</span></code></pre>
         </section>
 
