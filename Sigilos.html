@@ -10,7 +10,7 @@
     <title>Sigilos — project v0.1.0</title>
     <link rel="stylesheet" href="dist/elixir-9f91ebe876dc01d67920.css" />
 
-    <script src="dist/sidebar_items-b65a1b18ac.js"></script>
+    <script src="dist/sidebar_items-57028595a6.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -82,13 +82,19 @@ Sigilos <small class="app-vsn">(project v0.1.0)</small>
   <a href="#module-ejemplos" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Ejemplos
 </h3>
-<p>  Ejemplo 1: Sigilo que generan lista de caracteres.Es equivalente a encerrar un
+<p>  Ejemplo 1: Sigilo que genera lista de caracteres.Es equivalente a encerrar un
   texto entre comillas simples</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="s">~c/2 + 7 = 9/</span><span class="w">
 </span><span class="sc">&#39;2 + 7 = 9&#39;</span></code></pre><p>  Ejemplo 2: Sigilo que genera listas de palabras.</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="sx">~w/rojo azul verde/</span><span class="w">
-</span><span class="p" data-group-id="6424135467-1">[</span><span class="s">&quot;rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;azul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;verde&quot;</span><span class="p" data-group-id="6424135467-1">]</span></code></pre><p>  Ejemplo 3: Sigilos y regex</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Regex</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="1237165753-1">(</span><span class="sr">~r/abc /</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abc &quot;</span><span class="p" data-group-id="1237165753-1">)</span><span class="w">
-</span><span class="p" data-group-id="1237165753-2">[</span><span class="s">&quot;abc &quot;</span><span class="p" data-group-id="1237165753-2">]</span><span class="w">
-
-</span><span class="gp unselectable">iex(3)&gt;</span></code></pre>
+</span><span class="p" data-group-id="7247722208-1">[</span><span class="s">&quot;rojo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;azul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;verde&quot;</span><span class="p" data-group-id="7247722208-1">]</span></code></pre><p>  Ejemplo 3: Sigilos y regex: ~r</p><pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Regex</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="2536052406-1">(</span><span class="sr">~r/[A-Z][a-z]*/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;55_Antonio&quot;</span><span class="p" data-group-id="2536052406-1">)</span><span class="w">
+</span><span class="p" data-group-id="2536052406-2">[</span><span class="s">&quot;Antonio&quot;</span><span class="p" data-group-id="2536052406-2">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Regex</span><span class="o">.</span><span class="n">run</span><span class="p" data-group-id="2536052406-3">(</span><span class="sr">~r/[A-Z][a-z]*/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;55_Antonio&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">return</span><span class="p">:</span><span class="w"> </span><span class="ss">:index</span><span class="p" data-group-id="2536052406-3">)</span><span class="w">
+</span><span class="p" data-group-id="2536052406-4">[</span><span class="p" data-group-id="2536052406-5">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p" data-group-id="2536052406-5">}</span><span class="p" data-group-id="2536052406-4">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Regex</span><span class="o">.</span><span class="n">split</span><span class="p" data-group-id="2536052406-6">(</span><span class="sr">~r{-}</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a-b-c&quot;</span><span class="p" data-group-id="2536052406-6">)</span><span class="w">
+</span><span class="p" data-group-id="2536052406-7">[</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p" data-group-id="2536052406-7">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Regex</span><span class="o">.</span><span class="n">split</span><span class="p" data-group-id="2536052406-8">(</span><span class="sr">~r{(x)}</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Elixir&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">include_captures</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p" data-group-id="2536052406-8">)</span><span class="w">
+</span><span class="p" data-group-id="2536052406-9">[</span><span class="s">&quot;Eli&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ir&quot;</span><span class="p" data-group-id="2536052406-9">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Regex</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="2536052406-10">(</span><span class="sr">~r/b/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;d&quot;</span><span class="p" data-group-id="2536052406-10">)</span><span class="w">
+</span><span class="s">&quot;adc&quot;</span></code></pre>
         </section>
 
 
@@ -154,7 +160,7 @@ La salida es una lista de Strings.</p><h2 id="sigil_j/1-parámetros" class="sect
   Examples
 </h2>
 <pre><code class="nohighlight makeup elixir"><span class="w"> </span><span class="gp unselectable">iex&gt; </span><span class="err">~</span><span class="n">j</span><span class="o">/</span><span class="n">hola</span><span class="w"> </span><span class="n">mundo</span><span class="w">
- </span><span class="p" data-group-id="3294523434-1">[</span><span class="s">&quot;hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mundo&quot;</span><span class="p" data-group-id="3294523434-1">]</span></code></pre>
+ </span><span class="p" data-group-id="8831927755-1">[</span><span class="s">&quot;hola&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mundo&quot;</span><span class="p" data-group-id="8831927755-1">]</span></code></pre>
   </section>
 </section>
 
