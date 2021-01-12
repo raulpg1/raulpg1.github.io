@@ -78,27 +78,27 @@ Protocolos <small class="app-vsn">(project v0.1.0)</small>
 
 
         <section id="moduledoc">
-<pre><code class="nohighlight makeup elixir"><span class="w"> </span><span class="kd">defimpl</span><span class="w"> </span><span class="nc">String.Chars</span><span class="p">,</span><span class="w"> </span><span class="ss">for</span><span class="p">:</span><span class="w"> </span><span class="nc">Tuple</span><span class="w"> </span><span class="k" data-group-id="2846480623-1">do</span><span class="w">
-   </span><span class="kd">def</span><span class="w"> </span><span class="nf">to_string</span><span class="p" data-group-id="2846480623-2">(</span><span class="n">tuple</span><span class="p" data-group-id="2846480623-2">)</span><span class="w"> </span><span class="k" data-group-id="2846480623-3">do</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="w"> </span><span class="kd">defimpl</span><span class="w"> </span><span class="nc">String.Chars</span><span class="p">,</span><span class="w"> </span><span class="ss">for</span><span class="p">:</span><span class="w"> </span><span class="nc">Tuple</span><span class="w"> </span><span class="k" data-group-id="9754849268-1">do</span><span class="w">
+   </span><span class="kd">def</span><span class="w"> </span><span class="nf">to_string</span><span class="p" data-group-id="9754849268-2">(</span><span class="n">tuple</span><span class="p" data-group-id="9754849268-2">)</span><span class="w"> </span><span class="k" data-group-id="9754849268-3">do</span><span class="w">
      </span><span class="n">interior</span><span class="w"> </span><span class="o">=</span><span class="w">
        </span><span class="n">tuple</span><span class="w">
-       </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Tuple</span><span class="o">.</span><span class="n">to_list</span><span class="p" data-group-id="2846480623-4">(</span><span class="p" data-group-id="2846480623-4">)</span><span class="w">
-       </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="2846480623-5">(</span><span class="o">&amp;</span><span class="nc">Kernel</span><span class="o">.</span><span class="n">to_string</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="2846480623-5">)</span><span class="w">
-       </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">join</span><span class="p" data-group-id="2846480623-6">(</span><span class="s">&quot;, &quot;</span><span class="p" data-group-id="2846480623-6">)</span><span class="w">
+       </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Tuple</span><span class="o">.</span><span class="n">to_list</span><span class="p" data-group-id="9754849268-4">(</span><span class="p" data-group-id="9754849268-4">)</span><span class="w">
+       </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="9754849268-5">(</span><span class="o">&amp;</span><span class="nc">Kernel</span><span class="o">.</span><span class="n">to_string</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="9754849268-5">)</span><span class="w">
+       </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">join</span><span class="p" data-group-id="9754849268-6">(</span><span class="s">&quot;, &quot;</span><span class="p" data-group-id="9754849268-6">)</span><span class="w">
 
-     </span><span class="s">&quot;{</span><span class="si" data-group-id="2846480623-7">#{</span><span class="n">interior</span><span class="si" data-group-id="2846480623-7">}</span><span class="s">}&quot;</span><span class="w">
-   </span><span class="k" data-group-id="2846480623-3">end</span><span class="w">
- </span><span class="k" data-group-id="2846480623-1">end</span></code></pre><h3 id="module-ejemplos" class="section-heading">
+     </span><span class="s">&quot;{</span><span class="si" data-group-id="9754849268-7">#{</span><span class="n">interior</span><span class="si" data-group-id="9754849268-7">}</span><span class="s">}&quot;</span><span class="w">
+   </span><span class="k" data-group-id="9754849268-3">end</span><span class="w">
+ </span><span class="k" data-group-id="9754849268-1">end</span></code></pre><h3 id="module-ejemplos" class="section-heading">
   <a href="#module-ejemplos" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Ejemplos
 </h3>
-<pre><code class="nohighlight makeup elixir"><span class="w"> </span><span class="gp unselectable">iex&gt; </span><span class="n">to_string</span><span class="p" data-group-id="1670597904-1">(</span><span class="p" data-group-id="1670597904-2">{</span><span class="mf">3.14</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">:pie</span><span class="p" data-group-id="1670597904-2">}</span><span class="p" data-group-id="1670597904-1">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="w"> </span><span class="gp unselectable">iex&gt; </span><span class="n">to_string</span><span class="p" data-group-id="2288140364-1">(</span><span class="p" data-group-id="2288140364-2">{</span><span class="mf">3.14</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">:pie</span><span class="p" data-group-id="2288140364-2">}</span><span class="p" data-group-id="2288140364-1">)</span><span class="w">
  </span><span class="s">&quot;{3.14, apple, pie}&quot;</span><span class="w">
 
- </span><span class="gp unselectable">iex&gt; </span><span class="n">to_string</span><span class="p" data-group-id="1670597904-3">(</span><span class="mi">4</span><span class="p" data-group-id="1670597904-3">)</span><span class="w">
+ </span><span class="gp unselectable">iex&gt; </span><span class="n">to_string</span><span class="p" data-group-id="2288140364-3">(</span><span class="mi">4</span><span class="p" data-group-id="2288140364-3">)</span><span class="w">
  </span><span class="s">&quot;4&quot;</span><span class="w">
 
- </span><span class="gp unselectable">iex&gt; </span><span class="n">to_string</span><span class="p" data-group-id="1670597904-4">(</span><span class="mf">4.5</span><span class="p" data-group-id="1670597904-4">)</span><span class="w">
+ </span><span class="gp unselectable">iex&gt; </span><span class="n">to_string</span><span class="p" data-group-id="2288140364-4">(</span><span class="mf">4.5</span><span class="p" data-group-id="2288140364-4">)</span><span class="w">
  </span><span class="s">&quot;4.5&quot;</span></code></pre>
         </section>
 
